@@ -7,7 +7,7 @@ from base_caching import BaseCaching
 class LRUCache(BaseCaching):
     """ LRUCache """
 
-    init__(self):
+    def __init__(self):
         """ Initialize LRUCache """
         super().__init__()
         self.history = []
