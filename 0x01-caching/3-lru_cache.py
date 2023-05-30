@@ -15,7 +15,8 @@ class LRUCache(BaseCaching):
     def put(self, key, item):
         """ Assigns the new item to the dictionary """
         if key is not None and item is not None:
-            if len(self.cache_data) >= BaseCaching.MAX_ITEMS and key not in self.cache_data:
+            if len(
+                    self.cache_data) >= BaseCaching.MAX_ITEMS and key not in self.cache_data:
                 print(f'DISCARD: {self.history[0]}')
                 del self.cache_data[self.history[0]]
                 del self.history[0]
