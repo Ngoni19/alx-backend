@@ -9,6 +9,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 class LRUCache(BaseCaching):
     """ LRUCache class
     """
+
     def __init__(self):
         super().__init__()
         self.history = []
@@ -18,7 +19,7 @@ class LRUCache(BaseCaching):
         """
         if not (key is None or item is None):
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS\
-                 and key not in self.cache_data:
+                    and key not in self.cache_data:
                 print(f'DISCARD: {self.history[0]}')
                 self.cache_data.pop(self.history[0])
                 del self.history[0]
